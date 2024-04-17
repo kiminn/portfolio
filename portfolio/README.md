@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+서버 사이드 렌더링(SSR, Server Side Rendering)과 클라이언트 사이드 렌더링(CSR, Client Side Rendering)은 </br>
+웹 애플리케이션에서 웹 페이지를 어떻게 렌더링하는지에 대한 두 가지 주요 접근 방식입니다.
 
-## Getting Started
+# 서버 사이드 렌더링 (SSR, Server Side Rendering)
 
-First, run the development server:
+    SSR은 웹 페이지의 렌더링을 서버 측에서 처리하는 방식입니다. 클라이언트가 페이지를 요청할 때, 서버에서 미리 완성된 형태의 HTML로 렌더링하여 클라이언트에게 전달합니다.
+    클라이언트가 서버로 요청을 보내면 서버는 데이터를 가져오고 해당 데이터를 포함하여 HTML 페이지를 완성합니다. 클라이언트에게 렌더링된 페이지가 전달되어 브라우저에 표시됩니다.
+    SSR은 초기 로딩 속도가 빠르고, SEO에 유리한 방식입니다. 브라우저에서 페이지를 렌더링하지 않고, 완전한 형태의 페이지가 전달되므로 웹 크롤러가 페이지 내용을 쉽게 수집할 수 있습니다.
+    단점으로는 서버 자원을 사용하고 렌더링 시간이 더 오래 걸릴 수 있으며, 동적으로 변하는 콘텐츠의 경우에는 추가적인 서버 요청이 필요할 수 있습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# 클라이언트 사이드 렌더링 (CSR, Client Side Rendering)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    CSR은 웹 페이지의 렌더링을 클라이언트 측에서 처리하는 방식입니다. 초기 요청 시에는 빈 페이지가 전달되며, 클라이언트에서 자바스크립트를 사용하여 동적으로 페이지를 생성합니다.
+    브라우저에서 페이지를 렌더링하는 방식이므로, 초기 로딩 속도가 느리지만, 페이지 렌더링 이후에는 데이터 요청빠르게 페이지 전환과 상호작용이 가능합니다.
+    CSR은 서버에 부담을 덜 주고, 웹 애플리케이션 로딩 이후에는 클라이언트에서 빠르게 동작합니다.
+    단점으로는 초기 로딩 속도가 느릴 수 있고, 검색 엔진 최적화(SEO)에 불리할 수 있습니다. 초기에는 빈 페이지가 로때문에 웹 크롤러가 페이지 내용을 수집하지 못할 수 있습니다.
