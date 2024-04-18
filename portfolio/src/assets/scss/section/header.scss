@@ -1,6 +1,7 @@
 #header {
     @include position-fixed;
     z-index: 9999;
+    font-family: var(--Header-font);
 }
 .header__inner {
     @include flex-between;
@@ -73,10 +74,10 @@
 
                 &::before {
                     content: '';
-                    width: 5px;
-                    height: 5px;
+                    width: 6px;
+                    height: 6px;
                     border-radius: 50%;
-                    background-color: var(--subBg200);
+                    background-color: var(--subBg300);
                     position: absolute;
                     left: 50%;
                     bottom: 4px;

@@ -1,3 +1,5 @@
+import kimi from '../assets/img/kimi.jpeg';
+
 export const headerNav = [
     {
         id: 1,
@@ -27,9 +29,9 @@ export const headerNav = [
 ];
 
 export const introText = {
-    title: '00 developer',
-    desc: ['talent is', 'found at the end of the', 'effort'],
-    // img: about,
+    title: 'FE developer',
+    desc: ['development', 'together'],
+    img: kimi,
 };
 
 export const skillsText = [];
