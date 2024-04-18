@@ -18,11 +18,14 @@ const Intro = () => {
                     <span className="line"></span>
                 </div>
                 <div className="intro__text">
-                    <div className="text">
-                        <div>{introText.desc[0]}</div>
+                    <a
+                        className="text"
+                        href="https://rainy-engine-976.notion.site/Development-Together-87f9157c66f24ed08b3cb94bc7306ac0?pvs=74"
+                    >
+                        <div className="resume">{introText.desc[0]}</div>
                         <div>{introText.desc[1]}</div>
                         <div>{introText.desc[2]}</div>
-                    </div>
+                    </a>
                     <div className="img">
                         <Image
                             src={introText.img}

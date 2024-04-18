@@ -30,7 +30,7 @@ export const headerNav = [
 
 export const introText = {
     title: 'FE developer',
-    desc: ['development', 'together'],
+    desc: ['go to resume', 'development', 'together'],
     img: kimi,
 };
 
