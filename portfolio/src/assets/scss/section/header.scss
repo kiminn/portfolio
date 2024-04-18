@@ -61,6 +61,10 @@
         li {
             display: inline;
 
+            &.active a::before {
+                transform: translateX(-50%) scaleX(1); // 활성 링크의 동그라미 유지
+            }
+
             a {
                 text-transform: uppercase;
                 font-size: 14px;
@@ -72,7 +76,7 @@
                     width: 5px;
                     height: 5px;
                     border-radius: 50%;
-                    background-color: var(--subBg300);
+                    background-color: var(--subBg200);
                     position: absolute;
                     left: 50%;
                     bottom: 4px;

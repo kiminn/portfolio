@@ -4,9 +4,14 @@ import { headerNav } from '@/constants';
 
 const Header = () => {
     const [show, setShow] = useState(false);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null); // 활성 링크의 인덱스 상태
 
     const toggleMenu = () => {
         setShow((prevShow) => !prevShow);
+    };
+
+    const handleLinkClick = (index: number) => {
+        setActiveIndex(index); // 클릭된 링크의 인덱스를 활성화
     };
 
     return (
@@ -22,8 +27,10 @@ const Header = () => {
                 <nav className={`header__nav ${show ? 'show' : ''}`} role="navigation" aria-label="메인 메뉴">
                     <ul>
                         {headerNav.map((nav, key) => (
-                            <li key={key}>
-                                <a href={nav.url}>{nav.title}</a>
+                            <li key={key} className={key === activeIndex ? 'active' : ''}>
+                                <a href={nav.url} onClick={() => handleLinkClick(key)}>
+                                    {nav.title}
+                                </a>
                             </li>
                         ))}
                     </ul>
