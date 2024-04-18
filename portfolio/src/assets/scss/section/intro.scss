@@ -48,7 +48,7 @@
         flex-direction: column;
         position: relative;
         opacity: 0; /* 초기 불투명도 주기 */
-        animation: fadeIn 1s ease forwards 0.8s; /* 지연 시간 포함된 애니메이션 설정 */
+        animation: fadeIn 1s ease forwards 0.9s; /* 지연 시간 포함된 애니메이션 설정 */
 
         .text {
             font-size: 2.5vw;
@@ -68,7 +68,7 @@
             -webkit-text-stroke-color: var(--subBg400); /* 스트로크 색상 */
 
             .resume {
-                font-size: 26px;
+                font-size: 24px;
                 -webkit-text-fill-color: var(--white); /* 원래 색상을 투명하게 */
                 -webkit-text-stroke-width: 0px; /* 스트로크 두께 */
                 -webkit-text-stroke-color: var(--white); /* 스트로크 색상 */
@@ -117,31 +117,31 @@
 
             &:nth-child(1) {
                 height: 1px;
-                animation-delay: 0.1s;
+                animation-delay: 0.2s;
             }
             &:nth-child(2) {
                 height: 2px;
-                animation-delay: 0.2s;
+                animation-delay: 0.3s;
             }
             &:nth-child(3) {
                 height: 5px;
-                animation-delay: 0.3;
+                animation-delay: 0.4;
             }
             &:nth-child(4) {
                 height: 9px;
-                animation-delay: 0.4s;
+                animation-delay: 0.5s;
             }
             &:nth-child(5) {
                 height: 13px;
-                animation-delay: 0.5s;
+                animation-delay: 0.6s;
             }
             &:nth-child(6) {
                 height: 17px;
-                animation-delay: 0.6s;
+                animation-delay: 0.7s;
             }
             &:nth-child(7) {
                 height: 25px;
-                animation-delay: 0.7s;
+                animation-delay: 0.8s;
             }
         }
 

@@ -34,7 +34,34 @@ export const introText = {
     img: kimi,
 };
 
-export const skillsText = [];
+export const frontEndText = [
+    {
+        text: 'JavaScript',
+    },
+    {
+        text: 'React',
+    },
+    {
+        text: 'TypeScript',
+    },
+    {
+        text: 'NEXTjs',
+    },
+];
+
+export const libraryText = [
+    {
+        title: '안녕',
+        desc: '하세요',
+    },
+];
+
+export const communicationText = [
+    {
+        title: '안녕',
+        desc: '하세요',
+    },
+];
 
 export const projectsText = [
     {
