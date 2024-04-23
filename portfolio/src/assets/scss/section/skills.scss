@@ -1,11 +1,16 @@
 .skill__inner {
     padding: 16px;
     display: flex;
-    width: 70%;
+    width: auto;
     border-bottom: 0.4vw solid var(--black100);
+    overflow: auto;
+    white-space: nowrap;
+    margin: 18px;
 
     @media (max-width: 800px) {
-        // flex-direction: column;
+        flex-direction: column;
+        padding-bottom: 22px;
+        margin: 18px;
     }
 
     .skill__title {

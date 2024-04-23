@@ -51,8 +51,34 @@ export const frontEndText = [
 
 export const libraryText = [
     {
-        title: '안녕',
-        desc: '하세요',
+        text: 'Recoil'
+    },
+    {
+        text: 'React-Query'
+    },
+    {
+        text: 'RHF'
+    },
+    {
+        text: 'zod, yup'
+    },
+    {
+        text: 'tailwind css'
+    },
+    {
+        text: ''
+    },
+    {
+        text: ''
+    },
+    {
+        text: ''
+    },
+    {
+        text: ''
+    },
+    {
+        text: ''
     },
 ];
 

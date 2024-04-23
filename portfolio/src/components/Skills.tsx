@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { frontEndText } from '../constants';
+import { frontEndText, libraryText } from '../constants';
 
 const Skill: FC = () => {
     return (
@@ -15,6 +15,17 @@ const Skill: FC = () => {
                     ))}
                 </div>
             </div>
+            <div className="skill__inner">
+                <h2 className="skill__title">Library</h2>
+                <div className="skill__desc">
+                    {libraryText.map((librarys, index: number) => (
+                        <div key={index}>
+                            <span>{librarys.text}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            s
         </section>
     );
 };
