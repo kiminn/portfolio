@@ -51,34 +51,46 @@ export const frontEndText = [
 
 export const libraryText = [
     {
-        text: 'Recoil'
+        text: 'Recoil',
     },
     {
-        text: 'React-Query'
+        text: 'React-Query',
     },
     {
-        text: 'RHF'
+        text: 'RHF',
     },
     {
-        text: 'zod, yup'
+        text: 'zod, yup',
     },
     {
-        text: 'tailwind css'
+        text: 'tailwind css',
     },
     {
-        text: ''
+        text: 'styled-components',
     },
     {
-        text: ''
+        text: 'Chakra UI',
     },
     {
-        text: ''
+        text: 'MUI UI',
     },
     {
-        text: ''
+        text: 'Socket.io',
     },
     {
-        text: ''
+        text: 'scss',
+    },
+    {
+        text: 'RTK',
+    },
+    {
+        text: 'emotion',
+    },
+    {
+        text: 'storybook',
+    },
+    {
+        text: 'zustand',
     },
 ];
 
