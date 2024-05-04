@@ -60,7 +60,25 @@ export const libraryText = [
         text: 'RHF',
     },
     {
-        text: 'zod, yup',
+        text: 'zod / yup',
+    },
+    {
+        text: 'Socket.io',
+    },
+    {
+        text: 'RTK',
+    },
+    {
+        text: 'zustand',
+    },
+];
+
+export const styleSheetText = [
+    {
+        text: 'Chakra UI',
+    },
+    {
+        text: 'MUI UI',
     },
     {
         text: 'tailwind css',
@@ -69,19 +87,7 @@ export const libraryText = [
         text: 'styled-components',
     },
     {
-        text: 'Chakra UI',
-    },
-    {
-        text: 'MUI UI',
-    },
-    {
-        text: 'Socket.io',
-    },
-    {
         text: 'scss',
-    },
-    {
-        text: 'RTK',
     },
     {
         text: 'emotion',
@@ -89,15 +95,26 @@ export const libraryText = [
     {
         text: 'storybook',
     },
-    {
-        text: 'zustand',
-    },
 ];
 
 export const communicationText = [
     {
-        title: '안녕',
-        desc: '하세요',
+        text: 'Github',
+    },
+    {
+        text: 'Notion',
+    },
+    {
+        text: 'Slack',
+    },
+    {
+        text: 'Linear',
+    },
+    {
+        text: 'Figma',
+    },
+    {
+        text: 'Jira',
     },
 ];
 

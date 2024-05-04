@@ -14,11 +14,17 @@
         font-family: var(--mainKor-font);
         text-transform: uppercase;
         color: var(--black100);
+        @media (max-width: 800px) {
+            position: sticky;
+            top: 0px;
+            left: 0px;
+        }
     }
     .skill__desc {
         width: 50%;
         display: flex;
         margin-top: 30px;
+        margin-bottom: 4px;
         @media (max-width: 800px) {
             width: 100%;
         }
