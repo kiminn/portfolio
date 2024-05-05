@@ -1,5 +1,7 @@
 import kimi from '@/assets/img/kimi.jpeg';
 import postmobism from '@/assets/projects/postmobism.png';
+import chapchap from '@/assets/projects/chapchap.png';
+import MMM from '@/assets/projects/MMM.png';
 
 export const headerNav = [
     {
@@ -124,17 +126,22 @@ export const projectsText = [
         title: 'PostMobism',
         img: postmobism,
         code: 'https://github.com/mobi-MIMIZ/PostMobism?tab=readme-ov-file',
-        stack: ['site coding', 'production period : two days', 'use stack : HTML5/CSS3, CSS Variable, Vite'],
+        stack: ['production period : 2024.02.03 ~ 2024.02.17', 'use stack : TypeScript, React, RTK, styled-component'],
     },
     {
         title: 'Chap-chap',
-        code: 'https://github.com/webstoryboy/port2023-react',
-        stack: ['site coding', 'production period : two days', 'use stack : HTML5/CSS3, CSS Variable, react'],
+        img: chapchap,
+        code: 'https://github.com/mobi-chap-chap/chap-chap',
+        stack: [
+            'production period : 2024.01.19 ~ 2024.01.30',
+            'use stack : TypeScript, React, rhf+zod, tailwind-css, react-query',
+        ],
     },
     {
         title: 'MMM',
-        code: 'https://github.com/webstoryboy/port2023-vue',
-        stack: ['site coding', 'production period : two days', 'use stack : HTML5/CSS3, Scss Variable, vue'],
+        img: MMM,
+        code: 'https://github.com/Manners-Maketh-Market/MMM',
+        stack: ['production period : 2023.10 ~ 2023.12', 'use stack : React, Recoil, react-query, styled-component'],
     },
 ];
 

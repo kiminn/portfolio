@@ -49,6 +49,8 @@
                 top: 180px;
 
                 @media (max-width: 800px) {
+                    height: 50vh;
+
                     top: 140px;
                 }
             }
@@ -57,6 +59,7 @@
                 top: 200px;
 
                 @media (max-width: 800px) {
+                    height: 50vh;
                     top: 160px;
                 }
             }
@@ -65,6 +68,7 @@
                 top: 220px;
 
                 @media (max-width: 800px) {
+                    height: 50vh;
                     top: 180px;
                 }
             }
@@ -87,13 +91,13 @@
                 top: 1vw;
 
                 @media (max-width: 800px) {
-                    font-size: 80px;
+                    font-size: 40px;
                     left: 20px;
                     top: 20px;
                 }
             }
             a.img {
-                width: 700px;
+                width: 690px;
                 height: 500px;
                 z-index: 999;
 
@@ -106,21 +110,25 @@
 
                 img:hover {
                     filter: saturate(100%);
-                    transform: scale(1.4);
+                    transform: scale(1.1);
+                }
+
+                @media (max-width: 800px) {
+                    width: 400px;
+                    z-index: 999;
                 }
             }
             a.img .view {
-                display: none;
+                display: block;
                 z-index: 9999;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                opacity: 0;
+                opacity: 1;
                 animation: fadeIn 0.3s ease-in-out;
                 font-size: 20px;
                 font-weight: bold;
-                text-decoration: underline;
                 text-transform: uppercase;
                 color: var(--black200);
             }
@@ -135,8 +143,9 @@
             }
 
             a.img:hover .view {
-                display: block;
-                opacity: 1;
+                display: none;
+                opacity: 0;
+                pointer-events: none; /* .view에 마우스 이벤트 전파 방지 */
             }
 
             .title {
@@ -148,6 +157,7 @@
                 font-family: var(--mainEng-font);
 
                 @media (max-width: 800px) {
+                    margin-top: 24px;
                     font-size: 26px;
                 }
             }
@@ -161,7 +171,7 @@
                 border-top: 1px solid var(--black);
                 border-bottom: 1px solid var(--black);
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 @media (max-width: 800px) {
                     flex-direction: column;
@@ -175,6 +185,9 @@
                     font-size: 18px;
                     padding: 3px 0;
                     text-transform: uppercase;
+                    @media (max-width: 800px) {
+                        font-size: 12px;
+                    }
                 }
             }
         }
