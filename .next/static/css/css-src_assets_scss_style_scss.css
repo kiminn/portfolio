@@ -28,7 +28,7 @@
   --mainNum-font: "gmarket";
   --Header-font: "Sedan";
   --mainBg-color: #a8b2bf;
-  --subBg100: #262614;
+  --subBg100: #36361e;
   --subBg200: #717343;
   --subBg300: #81887c;
   --subBg400: #f2ac29;
@@ -508,16 +508,19 @@ img {
   margin-left: 30px;
 }
 
-#port {
-  width: 100%;
-  margin-top: 30vh;
+#project {
+  margin-top: 12rem;
 }
 
-.port__inner {
+.project__inner {
   padding: 16px;
 }
-.port__inner .port__title {
-  width: 100%;
+.project__inner .project__title {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px;
+  left: 0;
+  width: 70%;
   height: 5vw;
   font-size: 4vw;
   font-weight: 900;
@@ -526,97 +529,154 @@ img {
   text-transform: uppercase;
   color: var(--black100);
   border-bottom: 0.4vw solid var(--black100);
-  margin-bottom: 16px;
-  text-indent: -0.26vw;
+  margin-bottom: 100px;
 }
-.port__inner .port__title em {
+@media (max-width: 800px) {
+  .project__inner .project__title {
+    width: 100%;
+    margin-bottom: 10vw;
+    font-size: 30px;
+    height: auto;
+    top: 68px;
+    z-index: 1000;
+    background-color: var(--mainBg-color);
+  }
+}
+.project__inner .project__title em {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 2;
 }
-.port__inner .port__wrap {
-  display: flex;
-  flex-wrap: wrap;
-  width: 7000px;
-}
-.port__inner .port__wrap .port__item {
-  width: 500px;
+.project__inner .project__wrap .project__item {
   height: 70vh;
-  background-color: var(--subBg100);
-  padding: 2.5rem;
-  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
 }
-.port__inner .port__wrap .port__item.p1 {
-  background-color: var(--subBg100);
-}
-.port__inner .port__wrap .port__item.p2 {
+.project__inner .project__wrap .project__item.s1 {
   background-color: var(--subBg200);
+  top: 180px;
 }
-.port__inner .port__wrap .port__item.p3 {
+@media (max-width: 800px) {
+  .project__inner .project__wrap .project__item.s1 {
+    top: 140px;
+  }
+}
+.project__inner .project__wrap .project__item.s2 {
   background-color: var(--subBg300);
+  top: 200px;
 }
-.port__inner .port__wrap .port__item.p4 {
+@media (max-width: 800px) {
+  .project__inner .project__wrap .project__item.s2 {
+    top: 160px;
+  }
+}
+.project__inner .project__wrap .project__item.s3 {
   background-color: var(--subBg400);
+  top: 220px;
 }
-.port__inner .port__wrap .port__item.p5 {
-  background-color: var(--subBg500);
+@media (max-width: 800px) {
+  .project__inner .project__wrap .project__item.s3 {
+    top: 180px;
+  }
 }
-.port__inner .port__wrap .port__item.p6 {
-  background-color: var(--subBg100);
-}
-.port__inner .port__wrap .port__item.p7 {
-  background-color: var(--subBg200);
-}
-.port__inner .port__wrap .port__item.p8 {
-  background-color: var(--subBg300);
-}
-.port__inner .port__wrap .port__item.p9 {
-  background-color: var(--subBg400);
-}
-.port__inner .port__wrap .port__item.p10 {
-  background-color: var(--subBg500);
-}
-.port__inner .port__wrap .port__item .num {
-  font-size: 2rem;
+.project__inner .project__wrap .project__item .num {
+  font-size: 5vw;
+  line-height: 1;
+  font-weight: 900;
   font-family: var(--mainNum-font);
+  position: absolute;
+  left: 1vw;
+  top: 1vw;
 }
-.port__inner .port__wrap .port__item .img {
-  display: block;
-  margin-top: -20px;
-  transition: margin-top 0.3s;
+@media (max-width: 800px) {
+  .project__inner .project__wrap .project__item .num {
+    font-size: 80px;
+    left: 20px;
+    top: 20px;
+  }
 }
-.port__inner .port__wrap .port__item .img img {
+.project__inner .project__wrap .project__item a.img {
+  width: 700px;
+  height: 500px;
+  z-index: 999;
+}
+.project__inner .project__wrap .project__item a.img img {
+  cursor: pointer;
   border-radius: 5px;
   filter: saturate(0%);
   transition: all 0.3s;
 }
-.port__inner .port__wrap .port__item .img:hover {
-  margin-top: 0;
-}
-.port__inner .port__wrap .port__item .img:hover img {
+.project__inner .project__wrap .project__item a.img img:hover {
   filter: saturate(100%);
+  transform: scale(1.4);
 }
-.port__inner .port__wrap .port__item .title {
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 0.8rem 0;
-  font-weight: 700;
-  color: var(--black100);
-  border-bottom: 2px solid var(--black100);
-  margin-bottom: 1rem;
+.project__inner .project__wrap .project__item a.img .view {
+  display: none;
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: var(--black200);
 }
-.port__inner .port__wrap .port__item .desc {
-  font-size: 1rem;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.port__inner .port__wrap .port__item .site {
-  border: 1px solid var(--black100);
+.project__inner .project__wrap .project__item a.img:hover .view {
   display: block;
-  text-align: center;
-  padding: 0.625rem 1.5rem;
-  margin-top: 1.5rem;
-  transition: all 0.2s;
+  opacity: 1;
 }
-.port__inner .port__wrap .port__item .site:hover {
-  background-color: var(--black100);
-  color: var(--white);
+.project__inner .project__wrap .project__item .title {
+  margin-bottom: 1rem;
+  font-size: 3vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: var(--mainEng-font);
+}
+@media (max-width: 800px) {
+  .project__inner .project__wrap .project__item .title {
+    font-size: 26px;
+  }
+}
+.project__inner .project__wrap .project__item .stack {
+  position: absolute;
+  left: 0;
+  bottom: 3%;
+  width: 98%;
+  margin-left: 1%;
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .project__inner .project__wrap .project__item .stack {
+    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
+    padding: 5px 0;
+  }
+}
+.project__inner .project__wrap .project__item .stack span {
+  font-family: var(--mainKor-font);
+  font-size: 18px;
+  padding: 3px 0;
+  text-transform: uppercase;
 }

@@ -1,13 +1,15 @@
-#port {
-    width: 100%;
-    margin-top: 30vh;
-    // overflow: hidden;
+#project {
+    margin-top: 12rem;
 }
-.port__inner {
+
+.project__inner {
     padding: 16px;
 
-    .port__title {
-        width: 100%;
+    .project__title {
+        position: sticky;
+        top: 70px;
+        left: 0;
+        width: 70%;
         height: 5vw;
         font-size: 4vw;
         font-weight: 900;
@@ -16,8 +18,17 @@
         text-transform: uppercase;
         color: var(--black100);
         border-bottom: 0.4vw solid var(--black100);
-        margin-bottom: 16px;
-        text-indent: -0.26vw;
+        margin-bottom: 100px;
+
+        @media (max-width: 800px) {
+            width: 100%;
+            margin-bottom: 10vw;
+            font-size: 30px;
+            height: auto;
+            top: 68px;
+            z-index: 1000;
+            background-color: var(--mainBg-color);
+        }
 
         em {
             font-size: 1.25rem;
@@ -25,94 +36,145 @@
             line-height: 2;
         }
     }
-    .port__wrap {
-        display: flex;
-        flex-wrap: wrap;
-        width: 7000px;
-
-        .port__item {
-            width: 500px;
+    .project__wrap {
+        .project__item {
             height: 70vh;
-            background-color: var(--subBg100);
-            padding: 2.5rem;
-            margin-right: 20px;
+            @include flex-center;
+            flex-direction: column;
+            position: sticky;
+            left: 0;
 
-            &.p1 {
-                background-color: var(--subBg100);
-            }
-            &.p2 {
+            &.s1 {
                 background-color: var(--subBg200);
+                top: 180px;
+
+                @media (max-width: 800px) {
+                    top: 140px;
+                }
             }
-            &.p3 {
+            &.s2 {
                 background-color: var(--subBg300);
+                top: 200px;
+
+                @media (max-width: 800px) {
+                    top: 160px;
+                }
             }
-            &.p4 {
+            &.s3 {
                 background-color: var(--subBg400);
+                top: 220px;
+
+                @media (max-width: 800px) {
+                    top: 180px;
+                }
             }
-            &.p5 {
-                background-color: var(--subBg500);
-            }
-            &.p6 {
-                background-color: var(--subBg100);
-            }
-            &.p7 {
-                background-color: var(--subBg200);
-            }
-            &.p8 {
-                background-color: var(--subBg300);
-            }
-            &.p9 {
-                background-color: var(--subBg400);
-            }
-            &.p10 {
-                background-color: var(--subBg500);
-            }
+            // &.s4 {
+            //     background-color: var(--subBg100);
+            //     top: 240px;
+
+            //     @media (max-width: 800px) {
+            //         top: 200px;
+            //     }
+            // }
+
             .num {
-                font-size: 2rem;
+                font-size: 5vw;
+                line-height: 1;
+                font-weight: 900;
                 font-family: var(--mainNum-font);
+                position: absolute;
+                left: 1vw;
+                top: 1vw;
+
+                @media (max-width: 800px) {
+                    font-size: 80px;
+                    left: 20px;
+                    top: 20px;
+                }
             }
-            .img {
-                display: block;
-                margin-top: -20px;
-                transition: margin-top 0.3s;
+            a.img {
+                width: 700px;
+                height: 500px;
+                z-index: 999;
 
                 img {
+                    cursor: pointer;
                     border-radius: 5px;
                     filter: saturate(0%);
                     transition: all 0.3s;
                 }
 
-                &:hover {
-                    margin-top: 0;
-
-                    img {
-                        filter: saturate(100%);
-                    }
+                img:hover {
+                    filter: saturate(100%);
+                    transform: scale(1.4);
                 }
             }
-            .title {
-                font-size: 1.5rem;
-                text-align: center;
-                padding: 0.8rem 0;
-                font-weight: 700;
-                color: var(--black100);
-                border-bottom: 2px solid var(--black100);
-                margin-bottom: 1rem;
+            a.img .view {
+                display: none;
+                z-index: 9999;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                animation: fadeIn 0.3s ease-in-out;
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration: underline;
+                text-transform: uppercase;
+                color: var(--black200);
             }
-            .desc {
-                font-size: 1rem;
-            }
-            .site {
-                border: 1px solid var(--black100);
-                display: block;
-                text-align: center;
-                padding: 0.625rem 1.5rem;
-                margin-top: 1.5rem;
-                transition: all 0.2s;
 
-                &:hover {
-                    background-color: var(--black100);
-                    color: var(--white);
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            a.img:hover .view {
+                display: block;
+                opacity: 1;
+            }
+
+            .title {
+                margin-bottom: 1rem;
+                font-size: 3vw;
+                font-weight: 900;
+                text-transform: uppercase;
+                text-decoration: underline;
+                font-family: var(--mainEng-font);
+
+                @media (max-width: 800px) {
+                    font-size: 26px;
+                }
+            }
+
+            .stack {
+                position: absolute;
+                left: 0;
+                bottom: 3%;
+                width: 98%;
+                margin-left: 1%;
+                border-top: 1px solid var(--black);
+                border-bottom: 1px solid var(--black);
+                display: flex;
+                justify-content: space-between;
+
+                @media (max-width: 800px) {
+                    flex-direction: column;
+                    width: 90%;
+                    margin-left: 5%;
+                    padding: 5px 0;
+                }
+
+                span {
+                    font-family: var(--mainKor-font);
+                    font-size: 18px;
+                    padding: 3px 0;
+                    text-transform: uppercase;
                 }
             }
         }
