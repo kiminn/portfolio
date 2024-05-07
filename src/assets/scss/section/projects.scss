@@ -47,10 +47,8 @@
             &.s1 {
                 background-color: var(--subBg200);
                 top: 180px;
-
                 @media (max-width: 800px) {
                     height: 50vh;
-
                     top: 140px;
                 }
             }
@@ -65,11 +63,10 @@
             }
             &.s3 {
                 background-color: var(--subBg400);
-                top: 220px;
-
+                top: 240px;
                 @media (max-width: 800px) {
                     height: 50vh;
-                    top: 180px;
+                    top: 200px;
                 }
             }
             // &.s4 {
@@ -110,11 +107,11 @@
 
                 img:hover {
                     filter: saturate(100%);
-                    transform: scale(1.1);
+                    transform: scale(1.2);
                 }
 
                 @media (max-width: 800px) {
-                    width: 400px;
+                    width: 300px;
                     z-index: 999;
                 }
             }
@@ -149,7 +146,7 @@
             }
 
             .title {
-                margin-bottom: 1rem;
+                margin-bottom: 3rem;
                 font-size: 3vw;
                 font-weight: 900;
                 text-transform: uppercase;

@@ -579,12 +579,12 @@ img {
 }
 .project__inner .project__wrap .project__item.s3 {
   background-color: var(--subBg400);
-  top: 220px;
+  top: 240px;
 }
 @media (max-width: 800px) {
   .project__inner .project__wrap .project__item.s3 {
     height: 50vh;
-    top: 180px;
+    top: 200px;
   }
 }
 .project__inner .project__wrap .project__item .num {
@@ -616,11 +616,11 @@ img {
 }
 .project__inner .project__wrap .project__item a.img img:hover {
   filter: saturate(100%);
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 @media (max-width: 800px) {
   .project__inner .project__wrap .project__item a.img {
-    width: 400px;
+    width: 300px;
     z-index: 999;
   }
 }
@@ -652,7 +652,7 @@ img {
   pointer-events: none; /* .view에 마우스 이벤트 전파 방지 */
 }
 .project__inner .project__wrap .project__item .title {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   font-size: 3vw;
   font-weight: 900;
   text-transform: uppercase;
