@@ -32,7 +32,7 @@ export const headerNav = [
 ];
 
 export const introText = {
-    title: 'FE developer',
+    title: ['Hello,', 'Welcome', 'to my PortFolio'],
     desc: ['Resume on Click', 'development', 'together'],
     img: kimi,
 };

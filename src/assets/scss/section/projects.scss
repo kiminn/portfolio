@@ -94,8 +94,8 @@
                 }
             }
             a.img {
-                width: 690px;
-                height: 500px;
+                width: 680px;
+                margin-top: 30px;
                 z-index: 999;
 
                 img {
@@ -107,11 +107,11 @@
 
                 img:hover {
                     filter: saturate(100%);
-                    transform: scale(1.2);
                 }
 
                 @media (max-width: 800px) {
-                    width: 300px;
+                    width: 400px;
+                    margin-top: 0px;
                     z-index: 999;
                 }
             }
@@ -146,7 +146,8 @@
             }
 
             .title {
-                margin-bottom: 3rem;
+                position: absolute;
+                top: 3%;
                 font-size: 3vw;
                 font-weight: 900;
                 text-transform: uppercase;
@@ -183,7 +184,7 @@
                     padding: 3px 0;
                     text-transform: uppercase;
                     @media (max-width: 800px) {
-                        font-size: 12px;
+                        font-size: 10px;
                     }
                 }
             }

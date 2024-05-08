@@ -11,13 +11,12 @@
 }
 
 .intro__inner {
-    width: 100%;
     height: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    flex-direction: column;
-    padding: 16px;
+    flex-direction: row; /* 요소들을 수평으로 배열 */
+    justify-content: flex-end; /* 요소들을 컨테이너의 끝(오른쪽)으로 정렬 */
+    align-items: center; /* 가운데 정렬로 변경 */
+    margin: 0% 1%;
     animation: fadeIn 0.5s ease forwards;
 
     @media (max-width: 800px) {
@@ -25,50 +24,48 @@
     }
 
     .intro__title {
-        font-size: 10vw;
-        text-transform: uppercase;
+        margin-top: auto; /* 최하단으로 이동 */
+        font-size: 8vw;
         line-height: 1;
         font-weight: 800;
         white-space: nowrap;
-        text-indent: -0.5vw;
         letter-spacing: -0.3vw;
+        margin-right: auto; /* 타이틀을 왼쪽으로 밀어주기 */
 
         @media (max-width: 320px) {
             display: none;
         }
     }
     .intro__text {
-        width: 100%;
-        height: 40vh;
-        background-color: var(--black);
+        position: relative; /* 부모 요소를 relative로 설정 */
+        top: -16%;
+        z-index: 9999;
         color: var(--subBg500);
         display: flex;
-        align-items: center;
         justify-content: center;
         flex-direction: column;
-        position: relative;
-        opacity: 0; /* 초기 불투명도 주기 */
-        animation: fadeIn 1s ease forwards 0.9s; /* 지연 시간 포함된 애니메이션 설정 */
+        opacity: 0;
+        animation: fadeIn 1s ease forwards 0.9s;
 
         .text {
-            font-size: 2.2vw;
+            position: absolute;
+            top: 46%;
+            right: 30%;
+            font-size: 50px;
             line-height: 1;
             font-weight: 800;
-            text-transform: uppercase;
-
             text-align: center;
-            position: relative;
-            z-index: 100;
             cursor: pointer;
             transition: all 0.3s;
+            z-index: 999;
 
-            /* 텍스트 스트로크 설정 */
+            /* txt stroke */
             -webkit-text-fill-color: var(--subBg400); /* 원래 색상을 투명하게 */
             -webkit-text-stroke-width: 2px; /* 스트로크 두께 */
             -webkit-text-stroke-color: var(--subBg400); /* 스트로크 색상 */
 
             .resume {
-                font-size: 22px;
+                font-size: 34px;
                 -webkit-text-fill-color: var(--white); /* 원래 색상을 투명하게 */
                 -webkit-text-stroke-width: 0px; /* 스트로크 두께 */
                 -webkit-text-stroke-color: var(--white); /* 스트로크 색상 */
@@ -78,30 +75,69 @@
                 font-size: 24px;
             }
         }
+
         .img {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 30vh;
-            height: 30vh;
-            border-radius: 50%;
-            overflow: hidden;
+            overflow: visible;
             filter: grayscale(100%);
             transition: all 0.3s;
+            z-index: 0;
 
             @media (max-width: 320px) {
                 width: 20vh;
                 height: 20vh;
             }
+            .profile__img {
+                width: 380px;
+                height: 380px;
+                border-radius: 50%;
+            }
         }
 
-        &:hover .text {
-            -webkit-text-fill-color: transparent; /* 색상을 투명하게 */
-        }
         &:hover .img {
             filter: grayscale(0);
         }
+    }
+
+    .intro__circle {
+        display: flex;
+        border-radius: 50%;
+    }
+
+    .e1 {
+        position: absolute;
+        top: 40%;
+        right: 16%;
+        width: 180px;
+        height: 180px;
+        background-color: var(--subBg100);
+        z-index: 800;
+    }
+
+    .e2 {
+        position: absolute;
+        top: 58%;
+        right: 14%;
+        width: 130px;
+        height: 130px;
+        background-color: var(--subBg200);
+    }
+
+    .e3 {
+        position: absolute;
+        top: 78%;
+        right: 20%;
+        width: 100px;
+        height: 100px;
+        background-color: var(--subBg300);
+    }
+
+    .e4 {
+        position: absolute;
+        top: 88%;
+        right: 28%;
+        width: 80px;
+        height: 80px;
+        background-color: var(--subBg400);
     }
     .intro__lines {
         width: 100%;
