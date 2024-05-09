@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css");
 @import url("https://websfont.github.io/gmarket/gmarket.css");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
 .sedan-regular {
   font-family: "Sedan";
 }
@@ -22,11 +23,16 @@
   font-family: "gmarket";
 }
 
+.alegreya-sans {
+  font-family: "Alegreya Sans";
+}
+
 :root {
   --mainEng-font: "Montserrat";
   --mainKor-font: "nanumSquareNeo";
   --mainNum-font: "gmarket";
   --Header-font: "Sedan";
+  --text--font: "Alegreya Sans";
   --mainBg-color: #a8b2bf;
   --subBg100: #36361e;
   --subBg200: #717343;
@@ -196,20 +202,20 @@ img {
     position: absolute;
     right: 0;
     top: 68px;
-    background-color: rgba(116, 99, 99, 0.1);
+    background-color: var(--mainBg-color);
     -webkit-backdrop-filter: blur(15px);
             backdrop-filter: blur(15px);
     z-index: 9999;
-    min-width: 150px;
+    width: 100%;
     padding: 20px 0;
   }
   .header__inner .header__nav.show ul li {
     display: block;
-    text-align: right;
+    text-align: center;
   }
   .header__inner .header__nav.show ul li a {
     display: inline-block;
-    padding: 10px;
+    padding: 12px;
   }
   .header__inner .header__nav.show + .header__nav__mobile span::before {
     width: 20px;
@@ -297,6 +303,16 @@ img {
     opacity: 1;
   }
 }
+@keyframes fallDown {
+  from {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .intro__inner {
   height: 100%;
   display: flex;
@@ -328,25 +344,27 @@ img {
 .intro__inner .intro__text {
   position: relative; /* 부모 요소를 relative로 설정 */
   top: -16%;
-  z-index: 9999;
+  z-index: 8888;
   color: var(--subBg500);
   display: flex;
   justify-content: center;
   flex-direction: column;
   opacity: 0;
-  animation: fadeIn 1s ease forwards 0.9s;
+  animation: fadeIn 1.4s ease forwards;
 }
 .intro__inner .intro__text .text {
   position: absolute;
   top: 46%;
-  right: 30%;
-  font-size: 50px;
+  right: 16%;
+  font-family: "Alegreya Sans";
+  font-size: 70px;
   line-height: 1;
   font-weight: 800;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s;
   z-index: 999;
+  animation: fallDown 1.4s ease forwards;
   /* txt stroke */
   -webkit-text-fill-color: var(--subBg400); /* 원래 색상을 투명하게 */
   -webkit-text-stroke-width: 2px; /* 스트로크 두께 */
