@@ -21,19 +21,13 @@ export const headerNav = [
     },
     {
         id: 4,
-        title: 'about',
-        url: '#about',
-    },
-    {
-        id: 5,
-        title: 'test',
-        url: '#test',
+        title: 'contact',
+        url: '#contact',
     },
 ];
 
 export const introText = {
-    title: ['Hello,', 'Welcome', 'to my PortFolio'],
-    desc: ['Resume on Click', 'development', 'together'],
+    title: ['Hello,', `I'm a`, 'FE Developer'],
     img: kimi,
 };
 

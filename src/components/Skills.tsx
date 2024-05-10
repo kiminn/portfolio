@@ -7,7 +7,9 @@ const Skill: FC = () => {
         <section id="skill">
             <h2 className="skill__title">skills</h2>
             <div className="skill__inner">
-                <div className="inner__title">FrontEnd</div>
+                <div className="inner__title">
+                    <span className="highlight">FrontEnd</span>
+                </div>
                 <div className="skill__desc">
                     {frontEndText.map((skills, index: number) => (
                         <div key={index}>
@@ -15,7 +17,9 @@ const Skill: FC = () => {
                         </div>
                     ))}
                 </div>
-                <div>Library</div>
+                <div className="inner__title">
+                    <span className="highlight">Library</span>
+                </div>
                 <div className="skill__desc">
                     {libraryText.map((librarys, index: number) => (
                         <div key={index}>
@@ -25,15 +29,9 @@ const Skill: FC = () => {
                 </div>
             </div>
             <div className="skill__inner">
-                <div className="skill__desc">
-                    {libraryText.map((librarys, index: number) => (
-                        <div key={index}>
-                            <span>{librarys.text}</span>
-                        </div>
-                    ))}
+                <div className="inner__title">
+                    <span className="highlight">StyleSheet</span>
                 </div>
-            </div>
-            <div className="skill__inner">
                 <div className="skill__desc">
                     {styleSheetText.map((librarys, index: number) => (
                         <div key={index}>
@@ -43,6 +41,9 @@ const Skill: FC = () => {
                 </div>
             </div>
             <div className="skill__inner">
+            <div className="inner__title">
+                    <span className="highlight">Communication</span>
+                </div>
                 <div className="skill__desc">
                     {communicationText.map((librarys, index: number) => (
                         <div key={index}>

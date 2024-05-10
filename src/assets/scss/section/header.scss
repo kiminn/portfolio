@@ -3,11 +3,14 @@
     z-index: 9999;
     font-family: var(--Header-font);
 }
+
+#header.scrolled {
+    background: var(--title);
+    color: var(--mainBg-color);
+}
 .header__inner {
     @include flex-between;
-    background-color: rgba(116, 99, 99, 0.1);
-    backdrop-filter: blur(15px);
-    padding: 1rem;
+    padding: 20px 40px;
 
     .header__logo {
         font-size: 0.9rem;
@@ -18,7 +21,6 @@
         em {
             font-size: 10px;
             display: block;
-            color: var(--black200);
         }
     }
 
@@ -38,7 +40,7 @@
                     backdrop-filter: blur(15px);
                     z-index: 9999;
                     width: 100%;
-                    padding: 20px 0;
+                    padding: 20px 0px;
 
                     li {
                         display: block;
@@ -46,7 +48,7 @@
 
                         a {
                             display: inline-block;
-                            padding:12px;
+                            padding: 12px;
                         }
                     }
                 }
@@ -77,7 +79,7 @@
                     width: 6px;
                     height: 6px;
                     border-radius: 50%;
-                    background-color: var(--subBg300);
+                    background-color: var(--subBg500);
                     position: absolute;
                     left: 50%;
                     bottom: 4px;
