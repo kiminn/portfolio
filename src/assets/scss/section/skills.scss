@@ -1,24 +1,20 @@
 #skill {
-  
     background-color: var(--subBg100);
-    padding: 0px 40px;
-    height: 100vh;
+    padding: 20px 200px;
+    height: 60vh;
 }
 
 .skill__title {
-    position: sticky;
-    top: 10%;
-    left: 0;
     height: 5vw;
-    width: 70%;
-    margin-top: 100px;
+    text-align: center;
+    width: 100%;
     font-size: 4vw;
     font-weight: 900;
     line-height: 1.6;
     font-family: var(--mainKor-font);
     text-transform: uppercase;
-    color: var(--black100);
-    border-bottom: 0.4vw solid var(--black100);
+    color: var(--title);
+    border-bottom: 0.4vw solid var(--title);
     @media (max-width: 800px) {
         position: sticky;
         top: 0px;
@@ -26,42 +22,52 @@
     }
 }
 
+.skill__container {
+    display: flex;
+}
+
 .skill__inner {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0);
+
+    &.s1 {
+        background: var(--subBg200);
+    }
+
+    &.s2 {
+        background: var(--subBg400);
+    }
+
+    &.s3 {
+        background: radial-gradient(ellipse at bottom right, var(--subBg200) 50%, transparent 100%);
+    }
+
+    &.s4 {
+        background: radial-gradient(ellipse at bottom left, var(--subBg500) 50%, transparent 100%);
+    }
 
     .inner__title {
         font-family: var(--text-font);
+        text-align: center;
+        width: 50%;
         color: var(--black100);
-        font-size: 68px;
+        font-size: 2vw;
         font-weight: 700;
         cursor: pointer;
-        margin-top: 30px;
-
-        &:hover .highlight:after {
-            width: 100%;
-        }
-
-        .highlight {
-            display: inline-block;
-            position: relative;
-        }
-        .highlight:after {
-            content: '';
-            width: 0;
-            height: 50px;
-            display: inline-block;
-            background: #abc088;
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            z-index: -1;
-            transition: 0.3s all;
-        }
+        padding: 10px;
+    }
+    &:hover .skill__desc {
+        display: block;
     }
     .skill__desc {
         width: 100%;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: none;
 
         @media (max-width: 800px) {
             width: 100%;
