@@ -479,8 +479,13 @@ img {
 }
 #skill {
   background-color: var(--subBg100);
-  padding: 20px 200px;
+  padding: 1.2vw 18vw;
   height: 60vh;
+}
+@media (max-width: 800px) {
+  #skill {
+    height: 30vh;
+  }
 }
 
 .skill__title {
@@ -492,8 +497,8 @@ img {
   line-height: 1.6;
   font-family: var(--mainKor-font);
   text-transform: uppercase;
-  color: var(--title);
-  border-bottom: 0.4vw solid var(--title);
+  color: var(--mainBg-color);
+  border-bottom: 0.4vw solid var(--mainBg-color);
 }
 @media (max-width: 800px) {
   .skill__title {
@@ -506,36 +511,35 @@ img {
 
 .skill__container {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .skill__inner {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0);
+  width: 12vw;
+  align-items: center;
+  background: var(--subBg300);
 }
-.skill__inner.s1 {
-  background: var(--subBg200);
-}
-.skill__inner.s2 {
-  background: var(--subBg400);
-}
-.skill__inner.s3 {
-  background: radial-gradient(ellipse at bottom right, var(--subBg200) 50%, transparent 100%);
-}
-.skill__inner.s4 {
-  background: radial-gradient(ellipse at bottom left, var(--subBg500) 50%, transparent 100%);
+.skill__inner ::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-left: 6vw solid transparent;
+  border-right: 6vw solid transparent;
+  border-top: 4vw solid var(--subBg300);
 }
 .skill__inner .inner__title {
   font-family: var(--text-font);
   text-align: center;
-  width: 50%;
-  color: var(--black100);
-  font-size: 2vw;
+  color: var(--mainBg-color);
+  font-size: 1.6vw;
   font-weight: 700;
   cursor: pointer;
-  padding: 10px;
+  padding: 0.6vw;
 }
 .skill__inner:hover .skill__desc {
   display: block;
@@ -546,6 +550,7 @@ img {
   flex-direction: column;
   align-items: center;
   display: none;
+  text-align: center;
 }
 @media (max-width: 800px) {
   .skill__inner .skill__desc {
