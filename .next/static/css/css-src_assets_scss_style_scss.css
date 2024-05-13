@@ -359,7 +359,7 @@ img {
   animation: fallDown 1.2s ease-in-out forwards;
 }
 .intro__inner .intro__title .fallText:hover {
-  color: var(--subBg100);
+  color: var(--subBg500);
   cursor: pointer;
 }
 .intro__inner .intro__title .close {
@@ -379,26 +379,21 @@ img {
   margin-right: 1vw;
   padding: 0.6vw;
   font-family: var(--text-font);
-  font-size: 18px;
+  font-size: 1vw;
   font-weight: 500;
   cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid var(--title);
+  border-radius: 0.6vw;
+  border: 0.15vw solid var(--title);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 5px 5px 5px var(--black200);
+  letter-spacing: 0.06vw;
+  box-shadow: 0.3vw 0.3vw 0.3vw var(--black200);
 }
 .intro__inner .intro__title .intro__buttons .btn:hover {
-  transform: translate(5px, 5px);
-  box-shadow: inset 5px 5px 5px var(--black200);
+  transform: translate(0.3vw, 0.3vw);
+  box-shadow: inset 0.3vw 0.3vw 0.3vw var(--black200);
 }
 .intro__inner .intro__title .intro__buttons .contact {
   background-color: var(--subBg200);
-}
-@media (max-width: 320px) {
-  .intro__inner .intro__title {
-    display: none;
-  }
 }
 .intro__inner .intro__circles {
   position: relative; /*부모위치*/
@@ -430,7 +425,8 @@ img {
 }
 @media (max-width: 768px) {
   .intro__inner .circle:nth-child(1) {
-    width: 100px;
+    width: 280px;
+    height: 280px;
   }
 }
 .intro__inner .circle:nth-child(2) {
@@ -443,14 +439,27 @@ img {
   z-index: 0;
   animation-delay: 1.6s;
 }
+@media (max-width: 768px) {
+  .intro__inner .circle:nth-child(2) {
+    top: -160px;
+    right: 220px;
+    width: 160px;
+    height: 160px;
+  }
+}
 .intro__inner .circle:nth-child(3) {
   position: absolute;
-  top: 40px;
+  top: 2vw;
   right: 340px;
   width: 120px;
   height: 120px;
   background-color: var(--subBg300);
   animation-delay: 1.4s;
+}
+@media (max-width: 768px) {
+  .intro__inner .circle:nth-child(3) {
+    right: 20vw;
+  }
 }
 .intro__inner .circle:nth-child(4) {
   position: absolute;
@@ -462,6 +471,13 @@ img {
   animation-delay: 1s;
   transform: skew(20deg, 20deg);
 }
+@media (max-width: 768px) {
+  .intro__inner .circle:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    right: 60vw;
+  }
+}
 .intro__inner .circle:nth-child(5) {
   position: absolute;
   top: 220px;
@@ -472,15 +488,30 @@ img {
   animation-delay: 0.8s;
   transform: skew(-10deg, -40deg);
 }
+@media (max-width: 768px) {
+  .intro__inner .circle:nth-child(5) {
+    width: 80px;
+    height: 80px;
+  }
+}
 .intro__inner .circle:nth-child(6) {
   position: absolute;
   top: 300px;
   right: 550px;
-  width: 6vw;
-  height: 6vw;
+  width: 110px;
+  height: 110px;
   background-color: var(--subBg400);
   animation-delay: 0.4s;
 }
+@media (max-width: 768px) {
+  .intro__inner .circle:nth-child(6) {
+    top: 350px;
+    right: 20vw;
+    width: 50px;
+    height: 50px;
+  }
+}
+
 #skill {
   background-color: var(--subBg100);
   padding: 1.2vw 18vw;
@@ -567,8 +598,9 @@ img {
 .skill__inner .skill__desc span {
   font-size: 1vw;
   background-color: var(--subBg500);
+  border: 0.2vw solid var(--mainBg-color);
   color: white;
-  padding: 0.4vw 0.8vw;
+  padding: 0.2vw 0.6vw;
   text-align: center;
   border-radius: 2vw;
   font-weight: 600;

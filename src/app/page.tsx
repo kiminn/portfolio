@@ -1,6 +1,6 @@
 'use client';
 
-import About from '@/components/About';
+import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Intro from '@/components/Intro';
@@ -23,7 +23,7 @@ export default function Home() {
                 <Intro />
                 <Skills />
                 <Projects />
-                <About />
+                <Contact />
             </main>
             <Footer />
         </>
