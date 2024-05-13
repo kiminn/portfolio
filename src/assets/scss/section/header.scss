@@ -25,7 +25,7 @@
     }
 
     .header__nav {
-        @media (max-width: 800px) {
+        @media (max-width: 768px) {
             display: none;
 
             &.show {
@@ -99,7 +99,7 @@
         height: 40px;
         cursor: pointer;
 
-        @media (max-width: 800px) {
+        @media (max-width: 768px) {
             display: block;
         }
 

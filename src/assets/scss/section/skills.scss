@@ -1,9 +1,16 @@
 #skill {
     background-color: var(--subBg100);
     padding: 1.2vw 18vw;
-    height: 64vh;
-    @media (max-width: 800px) {
-        height: 24vh;
+    height: 70vh;
+
+    @media (max-width: 1280px) {
+        height: 50vh;
+    }
+    @media (max-width: 1024px) {
+        height: 40vh;
+    }
+    @media (max-width: 768px) {
+        height: 30vh;
     }
 }
 
@@ -18,12 +25,6 @@
     text-transform: uppercase;
     color: var(--mainBg-color);
     border-bottom: 0.4vw solid var(--mainBg-color);
-
-    @media (max-width: 800px) {
-        position: sticky;
-        top: 0px;
-        left: 0px;
-    }
 }
 
 .skill__container {
@@ -74,17 +75,13 @@
         display: none;
         text-align: center;
 
-        @media (max-width: 800px) {
-            width: 100%;
-        }
-
         .skillBox {
-            margin: 1vw 0vw;
+            margin: 0.8vw 0vw;
         }
 
         span {
             font-size: 1vw;
-            background-color: var(--subBg400);
+            background-color: var(--subBg500);
             color: white;
             padding: 0.4vw 0.8vw;
             text-align: center;

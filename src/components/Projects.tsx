@@ -7,9 +7,7 @@ const Projects = () => {
     return (
         <section id="project">
             <div className="project__inner">
-                <h2 className="project__title">
-                    projects <em>나의 작업물</em>
-                </h2>
+                <h2 className="project__title">my projects</h2>
                 <div className="project__wrap">
                     {projectsText.map((project, key) => (
                         <article className={`project__item s${key + 1}`} key={key}>

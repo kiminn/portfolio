@@ -38,7 +38,7 @@
     justify-content: flex-end; /* 요소들을 컨테이너의 끝(오른쪽)으로 정렬 */
     align-items: center; /* 가운데 정렬로 변경 */
 
-    @media (max-width: 800px) {
+    @media (max-width: 768px) {
         justify-content: center;
     }
 
@@ -139,7 +139,7 @@
             width: 380px;
             height: 380px;
             animation-delay: 2s;
-            @media (max-width: 800px) {
+            @media (max-width: 768px) {
                 width: 100px;
             }
         }
@@ -195,7 +195,7 @@
             height: 6vw;
             background-color: var(--subBg400);
             animation-delay: 0.4s;
-            @media (max-width: 800px) {
+            @media (max-width: 768px) {
             }
         }
     }
