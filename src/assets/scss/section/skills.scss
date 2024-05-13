@@ -1,9 +1,9 @@
 #skill {
     background-color: var(--subBg100);
     padding: 1.2vw 18vw;
-    height: 60vh;
+    height: 64vh;
     @media (max-width: 800px) {
-        height: 30vh;
+        height: 24vh;
     }
 }
 
@@ -36,8 +36,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 12vw;
-
+    width: 13vw;
     align-items: center;
     background: var(--subBg300);
 
@@ -47,22 +46,25 @@
         top: 100%;
         left: 0;
 
-        border-left: 6vw solid transparent;
-        border-right: 6vw solid transparent;
-        border-top: 4vw solid var(--subBg300);
+        border-left: 6.5vw solid transparent;
+        border-right: 6.5vw solid transparent;
+        border-top: 3vw solid var(--subBg300);
     }
 
     .inner__title {
         font-family: var(--text-font);
         text-align: center;
         color: var(--mainBg-color);
-        font-size: 1.6vw;
+        font-size: 1.8vw;
         font-weight: 700;
         cursor: pointer;
         padding: 0.6vw;
     }
     &:hover .skill__desc {
         display: block;
+    }
+    &:hover .inner__title {
+        color: var(--subBg400);
     }
     .skill__desc {
         width: 100%;
@@ -76,15 +78,18 @@
             width: 100%;
         }
 
+        .skillBox {
+            margin: 1vw 0vw;
+        }
+
         span {
-            font-size: 1.2rem;
+            font-size: 1vw;
             background-color: var(--subBg400);
             color: white;
-            padding: 8px 12px;
+            padding: 0.4vw 0.8vw;
             text-align: center;
-            border-radius: 20px;
+            border-radius: 2vw;
             font-weight: 600;
-            margin-right: 30px;
         }
     }
 }

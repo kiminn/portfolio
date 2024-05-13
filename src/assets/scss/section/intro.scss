@@ -59,6 +59,10 @@
             bottom: 32%;
             left: 40%;
             animation: fallDown 1.2s ease-in-out forwards;
+            &:hover {
+                color: var(--subBg100);
+                cursor: pointer;
+            }
         }
 
         .close {

@@ -11,7 +11,7 @@ const Skill: FC = () => {
                     <div className="inner__title">FrontEnd</div>
                     <div className="skill__desc">
                         {frontEndText.map((skills, index: number) => (
-                            <div key={index}>
+                            <div key={index} className="skillBox">
                                 <span>{skills.text}</span>
                             </div>
                         ))}
@@ -21,7 +21,7 @@ const Skill: FC = () => {
                     <div className="inner__title">Library</div>
                     <div className="skill__desc">
                         {libraryText.map((librarys, index: number) => (
-                            <div key={index}>
+                            <div key={index} className="skillBox">
                                 <span>{librarys.text}</span>
                             </div>
                         ))}
@@ -31,7 +31,7 @@ const Skill: FC = () => {
                     <div className="inner__title">StyleSheet</div>
                     <div className="skill__desc">
                         {styleSheetText.map((librarys, index: number) => (
-                            <div key={index}>
+                            <div key={index} className="skillBox">
                                 <span>{librarys.text}</span>
                             </div>
                         ))}
@@ -41,7 +41,7 @@ const Skill: FC = () => {
                     <div className="inner__title">Communication</div>
                     <div className="skill__desc">
                         {communicationText.map((librarys, index: number) => (
-                            <div key={index}>
+                            <div key={index} className="skillBox">
                                 <span>{librarys.text}</span>
                             </div>
                         ))}
