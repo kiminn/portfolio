@@ -1,0 +1,32 @@
+#contact {
+    height: 100vh;
+    padding: 2vw 18vw;
+}
+
+.contact__inner {
+    display: flex;
+    .postIt {
+        background-color: var(--subBg200);
+        box-shadow: 0.2vw 0.2vw 0.2vw var(--black300);
+        width: 13vw;
+        height: 17vw;
+    }
+    .contact__photo {
+        position: relative;
+        transform: rotate(-4deg);
+    }
+    .contact__text {
+        position: absolute;
+        left: 30vw;
+        top: -1vw;
+        transform: rotate(4deg);
+    }
+    .contact__wrap {
+        .contact__title {
+        }
+        .contact__form {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -386,11 +386,11 @@ img {
   border: 0.15vw solid var(--title);
   text-transform: uppercase;
   letter-spacing: 0.06vw;
-  box-shadow: 0.3vw 0.3vw 0.3vw var(--black200);
+  box-shadow: 0.2vw 0.2vw 0.2vw var(--black300);
 }
 .intro__inner .intro__title .intro__buttons .btn:hover {
-  transform: translate(0.3vw, 0.3vw);
-  box-shadow: inset 0.3vw 0.3vw 0.3vw var(--black200);
+  transform: translate(0.2vw, 0.2vw);
+  box-shadow: inset 0.2vw 0.2vw 0.2vw var(--black300);
 }
 .intro__inner .intro__title .intro__buttons .contact {
   background-color: var(--subBg200);
@@ -421,10 +421,12 @@ img {
 .intro__inner .circle:nth-child(1) {
   width: 380px;
   height: 380px;
+  border-radius: 4vw 8vw/8vw 4vw;
   animation-delay: 2s;
 }
 @media (max-width: 768px) {
   .intro__inner .circle:nth-child(1) {
+    border-radius: 50%;
     width: 280px;
     height: 280px;
   }
@@ -607,7 +609,7 @@ img {
 }
 
 #project {
-  margin: 1.4vw 18vw;
+  padding: 2vw 18vw;
 }
 
 .project__inner {
@@ -792,4 +794,33 @@ img {
   font-size: 1vw;
   padding: 0.3vw 0vw;
   text-transform: uppercase;
+}
+
+#contact {
+  height: 100vh;
+  padding: 2vw 18vw;
+}
+
+.contact__inner {
+  display: flex;
+}
+.contact__inner .postIt {
+  background-color: var(--subBg200);
+  box-shadow: 0.2vw 0.2vw 0.2vw var(--black300);
+  width: 13vw;
+  height: 17vw;
+}
+.contact__inner .contact__photo {
+  position: relative;
+  transform: rotate(-4deg);
+}
+.contact__inner .contact__text {
+  position: absolute;
+  left: 30vw;
+  top: -1vw;
+  transform: rotate(4deg);
+}
+.contact__inner .contact__wrap .contact__form {
+  display: flex;
+  flex-direction: column;
 }

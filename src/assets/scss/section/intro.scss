@@ -90,11 +90,11 @@
                 border: 0.15vw solid var(--title);
                 text-transform: uppercase;
                 letter-spacing: 0.06vw;
-                box-shadow: 0.3vw 0.3vw 0.3vw var(--black200);
+                box-shadow: 0.2vw 0.2vw 0.2vw var(--black300);
 
                 &:hover {
-                    transform: translate(0.3vw, 0.3vw);
-                    box-shadow: inset 0.3vw 0.3vw 0.3vw var(--black200);
+                    transform: translate(0.2vw, 0.2vw);
+                    box-shadow: inset 0.2vw 0.2vw 0.2vw var(--black300);
                 }
             }
 
@@ -131,9 +131,11 @@
         &:nth-child(1) {
             width: 380px;
             height: 380px;
+            border-radius: 4vw 8vw / 8vw 4vw;
             animation-delay: 2s;
 
             @media (max-width: 768px) {
+                border-radius: 50%;
                 width: 280px;
                 height: 280px;
             }
