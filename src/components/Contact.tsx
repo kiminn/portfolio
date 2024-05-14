@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import Image from 'next/image';
-import contactPhoto from '@/assets/img/jeju.jpg';
+import contactProfile from '@/assets/img/profile.png';
 
 const Contact: React.FC = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -26,19 +26,36 @@ const Contact: React.FC = () => {
     return (
         <section id="contact">
             <div className="contact__inner">
-                <Image src={contactPhoto} alt="myPhoto" className="postIt contact__photo"></Image>
-                <div className="postIt contact__text">안녕하세요 협업을 좋아하는 개발자입니다.</div>
-                <div className="contact__wrap">
+                <div className="card__wrap">
+                    <div className="necklace left" />
+                    <div className="necklace right" />
+                    <div className="square" />
+                    <div className="connection" />
+                    <div className="card">
+                        <div className="card__hole" />
+                        <div className="card__text">
+                            <div className="t1">김 가 영</div>
+                            <div className="t2">Kim KaYoung</div>
+                        </div>
+                        <div className="profile__box">
+                            <Image src={contactProfile} alt="profile" className="profile" />
+                        </div>
+                    </div>
+                </div>
+                <div className="contact__form">
                     <h3 className="title">Contact Me</h3>
-                    <form ref={form} onSubmit={sendEmail} className="contact__form">
-                        <label>Name</label>
-                        <input type="text" name="user_name" />
-                        <label>Email</label>
-                        <input type="email" name="user_email" />
-                        <label>Message</label>
-                        <textarea name="message" />
-                        <input type="submit" value="Send" />
-                    </form>
+                    <div className="form__wrap">
+                        <div className="contact__line" />
+                        <form ref={form} onSubmit={sendEmail} className="contact__form">
+                            <label>Name</label>
+                            <input type="text" name="user_name" className="input" />
+                            <label>Email</label>
+                            <input type="email" name="user_email" className="input" />
+                            <label>Message</label>
+                            <textarea name="message" className="message" />
+                            <input type="submit" value="Send" className="btn" />
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

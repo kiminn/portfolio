@@ -799,28 +799,179 @@ img {
 #contact {
   height: 100vh;
   padding: 2vw 18vw;
+  background-color: var(--subBg200);
 }
 
 .contact__inner {
   display: flex;
+  justify-content: space-between;
 }
-.contact__inner .postIt {
-  background-color: var(--subBg200);
-  box-shadow: 0.2vw 0.2vw 0.2vw var(--black300);
-  width: 13vw;
-  height: 17vw;
-}
-.contact__inner .contact__photo {
+.contact__inner .card__wrap {
   position: relative;
-  transform: rotate(-4deg);
 }
-.contact__inner .contact__text {
+.contact__inner .card__wrap .necklace {
+  width: 2vw;
+  height: 12vw;
+  z-index: 100;
+}
+.contact__inner .card__wrap .necklace.left {
   position: absolute;
-  left: 30vw;
-  top: -1vw;
-  transform: rotate(4deg);
+  top: 0;
+  left: 8vw;
+  transform: rotate(-9deg);
+  z-index: 100;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 0.2vw 0.2vw 0.2vw rgba(115, 115, 115, 0.385);
 }
-.contact__inner .contact__wrap .contact__form {
+.contact__inner .card__wrap .necklace.right {
+  position: absolute;
+  top: 0;
+  left: 10vw;
+  transform: rotate(9deg);
+  z-index: 200;
+  background-color: rgb(76, 76, 76);
+  box-shadow: 0.2vw 0.2vw 0.2vw rgba(115, 115, 115, 0.385);
+}
+.contact__inner .card__wrap .square {
+  position: absolute;
+  top: 11.8vw;
+  left: 8.5vw;
+  width: 3vw;
+  height: 2vw;
+  border: 0.3vw solid #c0c0c0;
+  box-shadow: inset 0.2vw 0.2vw 0.2vw rgba(115, 115, 115, 0.385);
+  border-radius: 0.5vw;
+  background-color: transparent;
+  z-index: 900;
+}
+.contact__inner .card__wrap .connection {
+  position: absolute;
+  left: 8.8vw;
+  top: 13.3vw;
+  width: 2.3vw;
+  height: 3vw;
+  border-radius: 0.2vw;
+  background-color: #acaea9;
+  box-shadow: 0.2vw 0.2vw 0.2vw rgba(115, 115, 115, 0.385);
+  z-index: 999;
+}
+.contact__inner .card__wrap .card {
+  position: absolute;
+  top: 15vw;
+  left: 2vw;
+  background-color: var(--white);
+  width: 16vw;
+  height: 22vw;
+  border-radius: 1vw;
+  box-shadow: 0.2vw 0.2vw 0.2vw rgba(115, 115, 115, 0.385);
+  z-index: 1;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.contact__inner .card__wrap .card .card__hole {
+  margin-top: 0.8vw;
+  background-color: var(--subBg200);
+  width: 3.4vw;
+  height: 1vw;
+  z-index: 99;
+  border-radius: 1vw;
+  box-shadow: inset 0.2vw 0.2vw 0.2vw rgba(115, 115, 115, 0.385);
+}
+.contact__inner .card__wrap .card .card__text {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1vw;
+  font-weight: 600;
+  padding: 1.2vw;
+  text-transform: uppercase;
+}
+.contact__inner .card__wrap .card .card__text .t1 {
+  font-family: var(--mainKor-font);
+}
+.contact__inner .card__wrap .card .card__text .t2 {
+  font-family: var(--mainEng-font);
+}
+.contact__inner .card__wrap .card .profile__box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.contact__inner .card__wrap .card .profile__box .profile {
+  background-color: var(--black400);
+  width: 9vw;
+  height: 12vw;
+}
+.contact__inner .contact__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+}
+.contact__inner .contact__form .title {
+  height: 5vw;
+  font-size: 4vw;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1.6;
+  font-family: var(--mainKor-font);
+  text-transform: uppercase;
+  border-bottom: 0.4vw solid var(--title);
+  margin-bottom: 1vw;
+  color: var(--title);
+}
+.contact__inner .form__wrap {
+  background-color: var(--subBg100);
+  border-radius: 4vw 8vw/8vw 4vw;
+  border-color: 1px solid black;
+  width: 30vw;
+  height: 30vw;
+  z-index: 0;
+  margin-top: 1vw;
+}
+.contact__inner .form__wrap .contact__line {
+  position: absolute;
+  border-radius: 4vw 8vw/8vw 4vw;
+  width: 30vw;
+  height: 30vw;
+  border: 0.3vw solid var(--subBg300);
+  z-index: 1;
+  transform: rotate(-7deg);
+  pointer-events: none;
+}
+.contact__inner .form__wrap .contact__form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 100px;
+  z-index: 999;
+  z-index: 2;
+}
+.contact__inner .form__wrap .input {
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid black;
+  outline: none;
+}
+.contact__inner .form__wrap .message {
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid black;
+  outline: none;
+  width: 100%;
+  height: 6vw;
+}
+.contact__inner .form__wrap .btn {
+  font-size: 1vw;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
 }
