@@ -5,7 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 
 const Projects = () => {
     return (
-        <section id="project">
+        <section id="projects">
             <div className="project__inner">
                 <h2 className="project__title">my projects</h2>
                 <div className="project__wrap">

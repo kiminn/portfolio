@@ -1,17 +1,7 @@
-#skill {
+#skills {
     background-color: var(--subBg100);
-    padding: 1.2vw 18vw;
-    height: 70vh;
-
-    @media (max-width: 1280px) {
-        height: 50vh;
-    }
-    @media (max-width: 1024px) {
-        height: 40vh;
-    }
-    @media (max-width: 768px) {
-        height: 30vh;
-    }
+    padding: 8vw 18vw;
+    height: 100vh;
 }
 
 .skill__title {
@@ -23,8 +13,8 @@
     line-height: 1.6;
     font-family: var(--mainKor-font);
     text-transform: uppercase;
-    color: var(--mainBg-color);
-    border-bottom: 0.4vw solid var(--mainBg-color);
+    color: var(--title);
+    border-bottom: 0.4vw solid var(--title);
 }
 
 .skill__container {
@@ -39,7 +29,7 @@
     height: 100%;
     width: 13vw;
     align-items: center;
-    background: var(--subBg300);
+    background: var(--mainBg-color);
 
     ::after {
         content: '';
@@ -49,13 +39,13 @@
 
         border-left: 6.5vw solid transparent;
         border-right: 6.5vw solid transparent;
-        border-top: 3vw solid var(--subBg300);
+        border-top: 3vw solid var(--mainBg-color);
     }
 
     .inner__title {
         font-family: var(--text-font);
         text-align: center;
-        color: var(--mainBg-color);
+        color: var(--title);
         font-size: 1.8vw;
         font-weight: 700;
         cursor: pointer;
@@ -65,7 +55,7 @@
         display: block;
     }
     &:hover .inner__title {
-        color: var(--subBg400);
+        color: var(--subBg100);
     }
     .skill__desc {
         width: 100%;
@@ -76,13 +66,13 @@
         text-align: center;
 
         .skillBox {
-            margin: 0.8vw 0vw;
+            margin: 1vw 0vw;
         }
 
         span {
             font-size: 1vw;
-            background-color: var(--subBg500);
-            border: 0.2vw solid var(--mainBg-color);
+            background-color: var(--subBg100);
+            border: 0.2vw solid var(--title);
             color: white;
             padding: 0.2vw 0.6vw;
             text-align: center;

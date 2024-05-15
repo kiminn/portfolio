@@ -1,18 +1,26 @@
 #contact {
     height: 100vh;
-    padding: 2vw 18vw;
+    padding: 4vw 18vw;
     background-color: var(--subBg200);
 }
-
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .contact__inner {
     display: flex;
     justify-content: space-between;
     .card__wrap {
         position: relative;
+        animation: fadeIn 0.4s ease forwards;
 
         .necklace {
             width: 2vw;
-            height: 12vw;
+            height: 14vw;
             z-index: 100;
 
             &.left {

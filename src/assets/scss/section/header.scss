@@ -7,7 +7,26 @@
 #header.scrolled {
     background: var(--title);
     color: var(--mainBg-color);
+
+    .header__inner {
+        ul {
+            background: var(--title);
+            color: var(--mainBg-color);
+        }
+        .header__nav__mobile {
+            span {
+                background-color: var(--mainBg-color);
+                &::before {
+                    background-color: var(--mainBg-color);
+                }
+                &::after {
+                    background-color: var(--mainBg-color);
+                }
+            }
+        }
+    }
 }
+
 .header__inner {
     @include flex-between;
     padding: 20px 40px;
@@ -40,7 +59,7 @@
                     backdrop-filter: blur(15px);
                     z-index: 9999;
                     width: 100%;
-                    padding: 20px 0px;
+                    padding: 4vw 0vw;
 
                     li {
                         display: block;
@@ -64,6 +83,11 @@
         li {
             display: inline;
 
+            &.active {
+                transition: all 0.2s ease-in-out;
+                color: var(--subBg100);
+            }
+
             &.active a::before {
                 transform: translateX(-50%) scaleX(1); // 활성 링크의 동그라미 유지
             }
@@ -79,15 +103,15 @@
                     width: 6px;
                     height: 6px;
                     border-radius: 50%;
-                    background-color: var(--subBg500);
+                    background-color: var(--subBg100);
                     position: absolute;
                     left: 50%;
-                    bottom: 4px;
+                    bottom: 0.1vw;
                     transform: translateX(-50%) scaleX(0); // 수평 중앙에 위치, 초기 상태는 보이지 않음
                     transition: all 0.3s ease;
                 }
                 &:hover::before {
-                    transform: translateX(-50%) scaleX(1); // 호버 시 전체 너비로 확장
+                    transform: translateX(-50%) X(1); // 호버 시 전체 너비로 확장
                 }
             }
         }
@@ -107,7 +131,7 @@
             display: block;
             width: 40px;
             height: 2px;
-            background-color: var(--black);
+            background-color: var(--title);
             margin-top: 19px;
             position: relative;
 
@@ -115,7 +139,7 @@
                 content: '';
                 width: 40px;
                 height: 2px;
-                background-color: var(--black);
+                background-color: var(--title);
                 position: absolute;
                 right: 0;
                 top: 6px;
@@ -125,7 +149,7 @@
                 content: '';
                 width: 40px;
                 height: 2px;
-                background-color: var(--black);
+                background-color: var(--title);
                 position: absolute;
                 left: 0;
                 bottom: 6px;

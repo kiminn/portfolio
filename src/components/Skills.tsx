@@ -4,7 +4,7 @@ import { communicationText, frontEndText, libraryText, styleSheetText } from '..
 
 const Skill: FC = () => {
     return (
-        <section id="skill">
+        <section id="skills">
             <h2 className="skill__title">My skills</h2>
             <div className="skill__container">
                 <div className="skill__inner s1">
