@@ -30,6 +30,16 @@ const Contact: React.FC = () => {
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        const formElements = form.current!.elements as any;
+        const userName = formElements.user_name.value.trim();
+        const userEmail = formElements.user_email.value.trim();
+        const message = formElements.message.value.trim();
+
+        if (!userName || !userEmail || !message) {
+            alert('모든 항목을 입력 후 다시 시도해주세요.');
+            return;
+        }
+
         emailjs
             .sendForm('kimmin', 'template_fkklqhg', form.current!, {
                 publicKey: '1XV4CBbdVkH5J6m_U',
@@ -52,6 +62,7 @@ const Contact: React.FC = () => {
             <div className={`contact__inner ${isFixed ? 'fixed' : ''}`}>
                 <h3 className="title">Contact</h3>
                 <div className="v-line" />
+                <hr />
                 <div className={`card__wrap ${isFixed ? 'fixed' : ''}`}>
                     <div className="necklace left" />
                     <div className="necklace right" />
@@ -68,15 +79,39 @@ const Contact: React.FC = () => {
                         </div>
                     </div>
                 </div>
+                <div className="contact__info">
+                    <div className="info">
+                        <label>name</label>
+                        <span>김가영</span>
+                    </div>
 
+                    <div className="info">
+                        <label>tel</label>
+                        <span>01056504491</span>
+                    </div>
+                    <div className="info">
+                        <label>email</label>
+                        <span>808010x@gmail.com</span>
+                    </div>
+                    <button>
+                        <a target="_blank" href="https://github.com/kiminn">
+                            GitHub
+                        </a>
+                    </button>
+                    <button>
+                        <a target="_blank" href="https://velog.io/@kiminn/posts">
+                            velog
+                        </a>
+                    </button>
+                </div>
                 <div className="contact__form">
                     <div className="form__wrap">
                         <form ref={form} onSubmit={sendEmail} className="contact__form">
-                            <label>NAME</label>
+                            <label>name</label>
                             <input type="text" name="user_name" className="input" />
-                            <label>EMAIL</label>
+                            <label>email</label>
                             <input type="email" name="user_email" className="input" />
-                            <label>MESSAGE</label>
+                            <label>message</label>
                             <textarea name="message" className="input message" />
                             <input type="submit" value="Send" className="btn" />
                         </form>

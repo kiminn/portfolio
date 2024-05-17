@@ -61,7 +61,7 @@
     height: 100%;
     width: 16vw;
     align-items: center;
-    background: var(--subBg500);
+    background: var(--subBg400);
     transition: box-shadow 0.3s;
 
     ::after {
@@ -72,10 +72,10 @@
 
         border-left: 8vw solid transparent;
         border-right: 8vw solid transparent;
-        border-top: 4vw solid var(--subBg500);
+        border-top: 4vw solid var(--subBg400);
     }
     &:hover {
-        box-shadow: 0.5vw 0.5vw 0.5vw rgba(115, 115, 115, 0.385);
+        box-shadow: 0.5vw 0.5vw 0.5vw var(--shadow);
     }
 
     .inner__title {

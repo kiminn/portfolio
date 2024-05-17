@@ -27,7 +27,7 @@
     .project__wrap {
         .project__item {
             border-radius: 2vw;
-            height: 80vh;
+            height: 75vh;
             @include flex-center;
             flex-direction: column;
             position: sticky;
@@ -130,7 +130,7 @@
                 font-size: 1.3vw;
                 font-weight: bold;
                 text-transform: uppercase;
-                color: var(--black300);
+                color: var(--black200);
             }
 
             @keyframes fadeIn {
@@ -166,13 +166,14 @@
             .stack {
                 position: absolute;
                 left: 0;
-                bottom: 3%;
+                bottom: 4%;
                 width: 98%;
                 margin-left: 1%;
                 border-top: 1px solid var(--black);
                 border-bottom: 1px solid var(--black);
                 display: flex;
                 justify-content: space-evenly;
+                font-weight: 500;
 
                 @media (max-width: 768px) {
                     flex-direction: column;

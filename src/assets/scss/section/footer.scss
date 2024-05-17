@@ -1,0 +1,9 @@
+.footer {
+    @include flex-center;
+    color: var(--black100);
+    font-size: 1vw;
+
+    strong {
+        font-weight: 700;
+    }
+}
