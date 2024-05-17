@@ -13,23 +13,27 @@ const Intro = () => {
                     <div>{introText.title[2]}</div>
                     <div className="close"></div>
                     <div className="intro__buttons">
-                        <a target="_blank" href="https://rainy-engine-976.notion.site/Development-Together-87f9157c66f24ed08b3cb94bc7306ac0?pvs=74">
+                        <a
+                            target="_blank"
+                            href="https://rainy-engine-976.notion.site/Development-Together-87f9157c66f24ed08b3cb94bc7306ac0?pvs=74"
+                        >
                             <button className="btn resume">Resume On Click</button>
                         </a>
-                        <a target="_blank" href="https://rainy-engine-976.notion.site/Development-Together-87f9157c66f24ed08b3cb94bc7306ac0?pvs=74">
+                        <a href="#contact">
                             <button className="btn contact">Contact Me</button>
                         </a>
                     </div>
                 </div>
+
                 <div className="intro__circles">
                     <div className="img">
                         <Image src={introText.img} alt="kimi" className="circle" />
                     </div>
-                    <div className="circle"></div>
-                    <div className="circle"></div>
-                    <div className="circle"></div>
-                    <div className="circle"></div>
-                    <div className="circle"></div>
+                    <div className="circle" />
+                    <div className="circle" />
+                    <div className="circle" />
+                    <div className="circle" />
+                    <div className="circle" />
                 </div>
             </div>
         </section>

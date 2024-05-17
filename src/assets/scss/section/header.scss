@@ -83,13 +83,8 @@
         li {
             display: inline;
 
-            &.active {
-                transition: all 0.2s ease-in-out;
-                color: var(--subBg100);
-            }
-
-            &.active a::before {
-                transform: translateX(-50%) scaleX(1); // 활성 링크의 동그라미 유지
+            &:hover a::before {
+                transform: scaleX(1); // 활성 링크의 동그라미 유지
             }
 
             a {
@@ -100,18 +95,17 @@
 
                 &::before {
                     content: '';
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 50%;
-                    background-color: var(--subBg100);
+                    width: calc(100% - 28px);
+                    height: 1px;
+                    background-color: var(--mainBg-color);
                     position: absolute;
-                    left: 50%;
-                    bottom: 0.1vw;
-                    transform: translateX(-50%) scaleX(0); // 수평 중앙에 위치, 초기 상태는 보이지 않음
-                    transition: all 0.3s ease;
+                    left: 14px;
+                    bottom: 10px;
+                    transform: scaleX(0);
+                    transition: all 0.3s;
                 }
                 &:hover::before {
-                    transform: translateX(-50%) X(1); // 호버 시 전체 너비로 확장
+                    transform: scaleX(1); // 호버 시 전체 너비로 확장
                 }
             }
         }

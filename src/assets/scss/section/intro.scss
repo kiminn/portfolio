@@ -12,7 +12,7 @@
 }
 
 @keyframes fallDown {
-    from { 
+    from {
         transform: translateY(-300%);
     }
     to {
@@ -90,11 +90,11 @@
                 border: 0.15vw solid var(--title);
                 text-transform: uppercase;
                 letter-spacing: 0.06vw;
-                box-shadow: 0.2vw 0.2vw 0.2vw var(--black300);
+                box-shadow: 0.2vw 0.2vw 0.2vw var(--black100);
 
                 &:hover {
                     transform: translate(0.2vw, 0.2vw);
-                    box-shadow: inset 0.2vw 0.2vw 0.2vw var(--black300);
+                    box-shadow: inset 0.2vw 0.2vw 0.2vw var(--black100);
                 }
             }
 
@@ -102,6 +102,16 @@
                 background-color: var(--subBg200);
             }
         }
+    }
+    .line {
+        position: absolute;
+        border-radius: 4vw 8vw / 8vw 4vw;
+        width: 30vw;
+        height: 30vw;
+        border: 0.3vw solid var(--subBg300);
+        z-index: 1;
+        transform: rotate(-7deg);
+        pointer-events: none;
     }
     .intro__circles {
         position: relative; /*부모위치*/
