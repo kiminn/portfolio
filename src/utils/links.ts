@@ -4,12 +4,15 @@ const link = () => {
             e.preventDefault();
 
             const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId as string);
 
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
+            if (targetId && targetId !== '#') {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         });
     });
 };
+
 export default link;
