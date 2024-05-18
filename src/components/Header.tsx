@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-
 import { headerNav } from '@/constants';
 
 const Header = () => {
@@ -35,7 +34,7 @@ const Header = () => {
             <div className="header__inner">
                 <div className="header__logo">
                     <h1>
-                        <a href="#">
+                        <a href="">
                             portfolio<em>next.js</em>
                         </a>
                     </h1>
@@ -43,7 +42,7 @@ const Header = () => {
                 <nav className={`header__nav ${show ? 'show' : ''}`} role="navigation" aria-label="메인 메뉴">
                     <ul>
                         {headerNav.map((nav, key) => (
-                            <li key={key} >
+                            <li key={key}>
                                 <a href={nav.url} onClick={() => handleLinkClick(key)}>
                                     {nav.title}
                                 </a>
