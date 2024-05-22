@@ -1,8 +1,19 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { introText } from '@/constants';
 const Intro = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const slideInterval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % introText.img.length);
+        }, 3000);
+
+        return () => clearInterval(slideInterval);
+    }, [introText.img.length, 3000]);
     return (
         <section id="intro">
             <div className="intro__inner">
@@ -27,7 +38,7 @@ const Intro = () => {
 
                 <div className="intro__circles">
                     <div className="img">
-                        <Image src={introText.img} alt="kimi" className="circle" />
+                        <Image src={introText.img[currentIndex]} alt={`slide-${currentIndex}`} className="circle" />
                     </div>
                     <div className="circle" />
                     <div className="circle" />
