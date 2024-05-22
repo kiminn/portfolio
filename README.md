@@ -44,3 +44,47 @@
 내부의 아이템들은 양 끝으로 정렬되면서 중앙에 맞추어지는 효과를 나타냅니다. 
 
 이는 헤더 내의 로고나 네비게이션 링크 등을 좌우로 균등하게 배치할 때 유용하게 사용됩니다.
+
+
+
+----
+
+## useEffect cleanup 매커니즘
+
+`useEffect`: 컴포넌트가 마운트 될 때 특정 동작(사이드이펙트)을 수행, 언마운트 될때 정리
+
+```jsx
+useEffect(() => {
+  const slideInterval = setInterval(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  }, interval);
+
+  return () => clearInterval(slideInterval); //CleanUp
+}, [images.length, interval]);
+```
+
+- 여기서 첫 번째 인수는 사이드 이펙트 정의하는 함수
+- 두 번째 인수는 의존성 배열 (변경 시 사이드 이펙트 함수 실행)
+
+``` jsx
+return () => clearInterval(slideInterval)
+```
+이 부분이 바로 "cleanup" 함수입니다. useEffect 내에서 반환되는 함수는 컴포넌트가 언마운트되거나, 의존성 배열의 값이 변경되어 useEffect가 재실행될 때 호출됩니다. 이 함수는 기존의 사이드 이펙트를 정리하는 역할을 합니다.
+
+
+#### 왜 필요한가?
+
+- 메모리 누수 방지: 컴포넌트가 언마운트된 후에도 setInterval이 계속 실행되는 것을 방지합니다.
+- 의존성 변경 처리: images.length 또는 interval이 변경되면 기존의 setInterval을 정리하고 새로운 setInterval을 설정합니다.
+
+#### 변경될만한 상황?
+
+images.length나 interval이 변경되는 경우는 특정 상황에 따라 다릅니다. 예를 들어, 사용자가 슬라이드 이미지 목록을 동적으로 업데이트하거나, 슬라이드 전환 속도를 조정할 수 있는 기능을 제공할 때 변경될 수 있습니다.
+
+-> 혹시나 사용자가 중간에 새로운 이미지 추가하거나 제거 시 length변경
+
+-> 슬라이드 전환 속도를 동적으로 변경할 수 있으면 interval 값이 변경될 수 있다.
+
+하지만 일반적인 슬라이드쇼에서는 이 값들이 변경될 일이 거의 없을 수 있습니다. 그렇다면 cleanup 함수와 의존성 배열의 역할을 설명하는 것이 더 의미가 있을 수 있습니다.
+
+useEffect 훅의 의존성 배열에 images.length와 interval을 포함시키는 것은 코드의 확장성 및 유지보수를 고려한 좋은 실천 방법입니다. 이를 통해 코드가 예기치 않은 상황에서도 올바르게 동작할 수 있습니다.
