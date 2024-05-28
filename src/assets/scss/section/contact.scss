@@ -33,9 +33,6 @@
         width: 70%;
         height: 50vh;
     }
-    @media (max-width: 575px) {
-        height: 40vh;
-    }
 
     .title {
         height: 5vw;
@@ -259,9 +256,9 @@
         position: absolute;
         right: 1.1vw;
         flex-direction: column;
-        height: 100%;
         width: 45%;
         margin-top: 1vw;
+        max-height: 300px;
 
         @media (max-width: 768px) {
             position: relative;
