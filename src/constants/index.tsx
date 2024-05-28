@@ -1,9 +1,4 @@
-import slide0 from '@/assets/img/slide0.jpeg';
-import slide1 from '@/assets/img/slide1.jpeg';
-import slide2 from '@/assets/img/slide2.jpeg';
-import slide3 from '@/assets/img/slide3.jpeg';
-import slide4 from '@/assets/img/slide4.png';
-import slide5 from '@/assets/img/slide5.png';
+import photo from '@/assets/img/photo.jpeg';
 import postmobism from '@/assets/projects/postmobism.png';
 import chapchap from '@/assets/projects/chapchap.png';
 import MMM from '@/assets/projects/MMM.png';
@@ -33,7 +28,7 @@ export const headerNav = [
 
 export const introText = {
     title: ['Hello,', `I'm a`, 'FE Developer'],
-    img: [slide0, slide1, slide2, slide3, slide4, slide5],
+    img: photo,
 };
 
 export const frontEndText = [
