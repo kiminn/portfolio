@@ -20,7 +20,7 @@ const Intro = () => {
                 <div className="intro__title">
                     <div>{introText.title[0]}</div>
                     <div>{introText.title[1]}</div>
-                    <div className="fallText">Collavorative</div>
+                    <div className="fallText">Collaborative</div>
                     <div>{introText.title[2]}</div>
                     <div className="close"></div>
                     <div className="intro__buttons">
